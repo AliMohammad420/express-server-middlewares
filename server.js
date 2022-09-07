@@ -16,7 +16,7 @@ app.get('/',(req,res)=>{
     res.status(200).send('Home page')
 })
 app.get('/square',validator,(req,res)=>{
-    res.status(200).json(`the squareNum ${req.query.num} is ${req.newNum}`);
+    res.status(200).send(`The squareNum ${req.query.num} is ${req.newNum}`);
 })
 
 app.use(errorHandler);
